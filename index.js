@@ -5,6 +5,8 @@ const express = require("express");
 require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const app = express();
+const dumpData= require("./controller/dumpData");
+
 app.use(cors());
 app.use(express.json());
 app.listen(PORT, () => {
@@ -81,3 +83,5 @@ app.get("/user_rank", (req, res) => {
     res.json(result[0]);
   }); 
 }); 
+
+app.post("/dumpData", dumpData);
