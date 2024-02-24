@@ -54,12 +54,12 @@ app.get("/last_week_leaderboard", (req, res) => {
   const startOfLastWeek = new Date(
     today.getFullYear(),
     today.getMonth(),
-    today.getDate() - today.getDay()
+    today.getDate() - today.getDay()-1
   );
   const endOfLastWeek = new Date(
     today.getFullYear(),
     today.getMonth(),
-    today.getDate() - today.getDay() +6
+    today.getDate() - today.getDay() -7
   );
 
   // Query to fetch the top 200 scores for the specified country in the last week
