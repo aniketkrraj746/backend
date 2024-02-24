@@ -6,7 +6,7 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "123456",
-  database: "backlight", 
+  database: "backlight",
 });
 db.connect((err) => {
   if (err) {
@@ -30,10 +30,9 @@ db.connect((err) => {
     //       throw err;
     //     }
     //     console.log(`Inserted row ${i}`);
-    //   }); 
+    //   });
     // }
   }
 });
 
 module.exports = db;
- 
