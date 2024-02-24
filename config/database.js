@@ -10,7 +10,7 @@ const db = mysql.createConnection({
 });
 db.connect((err) => {
   if (err) {
-    console.log("Error in db connection", err);
+    console.log("Error in db conection", err);
   } else {
     console.log("db connected successfully");
     // for (let i = 0; i < 10000; i++) {
