@@ -7,6 +7,7 @@ const db = mysql.createConnection({
   user: "root",
   password: "123456",
   database: "backlight",
+  port:"3306"
 });
 db.connect((err) => {
   if (err) {
