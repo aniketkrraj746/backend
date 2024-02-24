@@ -3,10 +3,10 @@ const mysql = require("mysql2");
 require("dotenv").config;
 const faker = require("faker");
 const db = mysql.createConnection({
-  host: "sql6.freesqldatabase.com",
-  user: "sql6686585",
-  password: "8bHY9f1WlQ",
-  database: "sql6686585",
+  host: "localhost",
+  user: "root",
+  password: "123456",
+  database: "backlight",
 });
 db.connect((err) => {
   if (err) {
