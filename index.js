@@ -8,7 +8,11 @@ const app = express();
 const userRoutes = require("./routes/routes")
 const getAllUsers = require("./controller/getAllUsers");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 app.use("/api/v1",userRoutes);
 app.listen(PORT, () => {
