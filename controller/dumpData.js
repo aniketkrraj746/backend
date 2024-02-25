@@ -1,4 +1,5 @@
 const faker = require("faker");
+const db = require("../config/database")
 const dumpData=()=>{
   for (let i = 0; i < 10000; i++) {
     const UID = `user${i}`;
