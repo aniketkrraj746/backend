@@ -6,6 +6,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const app = express();
 const dumpData= require("./controller/dumpData");
+const { deleteTable } = require("./controller/deleteTable");
 
 app.use(cors());
 app.use(express.json());
@@ -85,3 +86,4 @@ app.get("/user_rank", (req, res) => {
 }); 
 
 app.post("/dumpData", dumpData);
+app.delete("/deleteTable",deleteTable);
