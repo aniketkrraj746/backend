@@ -14,6 +14,6 @@ router.delete('/deleteTable',deleteTable);
 router.post("/dumpData",dumpData);
 router.get("/getAllUsers",getAllUsers);
 router.get("/current_week_leaderboard",currentWeekLeader);
-router.get("/UserId",UserById);
+router.post("/UserId",UserById);
 router.post("/last_week_leaderboard",lastWeekLeader);
 module.exports = router;
