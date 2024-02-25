@@ -18,7 +18,7 @@ const dumpData = () => {
     db.query(query, (err, result) => {
       if (err) {
         console.log(err);
-        throw err;
+        // throw err;
       }
       console.log(`Inserted row ${i}`);
     });
