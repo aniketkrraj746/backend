@@ -6,8 +6,6 @@ require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const app = express();
 const userRoutes = require("./routes/routes")
-const dumpData= require("./controller/dumpData");
-const  deleteTable  = require("./controller/deleteTable");
 const getAllUsers = require("./controller/getAllUsers");
 
 app.use(cors());
