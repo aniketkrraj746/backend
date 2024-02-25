@@ -13,6 +13,7 @@ const dumpData=()=>{
     const query = `INSERT INTO candidatescores (UID, Name, Score, Country, Timestamp) VALUES ('${UID}', '${Name}', ${Score}, '${Country}', '${Timestamp}')`;
     db.query(query, (err, result) => {
       if (err) {
+        console.log(err);
         throw err;
       }
       console.log(`Inserted row ${i}`);
