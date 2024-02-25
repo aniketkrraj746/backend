@@ -5,9 +5,9 @@ const express = require("express");
 require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const app = express();
-const userRoutes = require("./routes/dumpdata")
+const userRoutes = require("./routes/routes")
 const dumpData= require("./controller/dumpData");
-const { deleteTable } = require("./controller/deleteTable");
+const  deleteTable  = require("./controller/deleteTable");
 const getAllUsers = require("./controller/getAllUsers");
 
 app.use(cors());
@@ -27,5 +27,3 @@ app.get("/", (req, res) => [
 
 // Fetch user rank, given the userId
 app.get("/allData",getAllUsers); // Get all data from users table
-app.post("/dumpData", dumpData);
-app.delete("/deleteTable",deleteTable);

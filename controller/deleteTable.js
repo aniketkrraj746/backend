@@ -6,8 +6,9 @@ const deleteTable=()=>{
         console.log(err);
         throw err;
       }
-      console.log(`Inserted row ${i}`);
+      console.log("Table deleted");
+    //   console.log(`Inserted row ${i}`);
     });
   
 }
-module.exports={deleteTable};
+module.exports=deleteTable;

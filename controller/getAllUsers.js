@@ -1,4 +1,4 @@
-const db = require("/config/database");
+const db = require("../config/database");
 const getAllUsers= (req,res) => {
   const query = `SELECT * FROM candidatescores`;
   db.query(query, (err, results) => {
