@@ -3,7 +3,13 @@ const db=require("../config/database");
 const UserById = (req, res) => {
   const userId = req.body.userId;
   // Query to fetch the rank of the specified user
-  const query = `SELECT * FROM candidatescores WHERE UID = ${userId}`;
+  const query = `SELECT * from 
+(SELECT RANK() OVER(ORDER BY Score DESC) AS rank_place,
+  Name,
+  UID,
+  Score,
+  Country
+FROM candidatescores) as abcd  WHERE UID = ${userId}`;
   db.query(query, (err, result) => {
     if (err) throw err;
     if(result.length > 0){
