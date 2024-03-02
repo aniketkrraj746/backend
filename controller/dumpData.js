@@ -23,5 +23,6 @@ const dumpData = () => {
       console.log(`Inserted row ${i}`);
     });
   }
+
 };
 module.exports = dumpData;

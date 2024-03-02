@@ -1,5 +1,6 @@
 // const mysql = require("mysql");
 const mysql = require("mysql2");
+const fs=require('fs');
 require("dotenv").config;
 const faker = require("faker");
 const db = mysql.createConnection({
@@ -8,6 +9,15 @@ const db = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   port: process.env.port,
+  rejectUnauthorized: false,
+  // ssl: {
+  //   rejectUnauthorized: true, // Set to true for stricter validation (optional)
+  //   ca: process.env.ca
+
+  // },
+  // ssl: {
+  //   ca: fs.readFileSync("../../../Downloads/ca.pem"),
+  // },
 
   // host: "localhost",
   // user: "root",
